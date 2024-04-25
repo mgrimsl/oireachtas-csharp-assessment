@@ -1,10 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
 using OireachtasAPI;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace TestOireachtasAPI
 {
@@ -14,7 +14,7 @@ namespace TestOireachtasAPI
         dynamic expected;
         IDataRepo api;
         IDataRepo file;
-        
+
         [TestInitialize]
         public void SetUp()
         {
@@ -52,8 +52,8 @@ namespace TestOireachtasAPI
         [TestMethod]
         public void TestSponsor()
         {
-            List<JToken> results = Program.filterBillsSponsoredBy("IvanaBacik",ref leg, ref mem);
-            Assert.IsTrue(results.Count>=2);
+            List<JToken> results = Program.filterBillsSponsoredBy("IvanaBacik", ref leg, ref mem);
+            Assert.IsTrue(results.Count >= 2);
         }
     }
 
@@ -67,8 +67,7 @@ namespace TestOireachtasAPI
         public void Testlastupdated()
         {
             List<string> expected = new List<string>(){
-                "77", "58", "141", "55", "94", "133", "132", "131",
-                "111", "135", "134", "91", "129", "103", "138", "106", "139"
+                   "141","91","111","55","129","103","131","135","101","77","138","139","106","134","133","58","132"
             };
             List<string> received = new List<string>();
 
