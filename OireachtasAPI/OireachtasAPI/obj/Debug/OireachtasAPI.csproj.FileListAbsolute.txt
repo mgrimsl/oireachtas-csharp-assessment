@@ -1,0 +1,13 @@
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\bin\Debug\legislation.json
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\bin\Debug\members.json
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\bin\Debug\OireachtasAPI.exe.config
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\bin\Debug\OireachtasAPI.exe
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\bin\Debug\OireachtasAPI.pdb
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\obj\Debug\OireachtasAPI.csproj.AssemblyReference.cache
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\obj\Debug\OireachtasAPI.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\obj\Debug\Oireacht.F580F35F.Up2Date
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\obj\Debug\OireachtasAPI.exe
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\obj\Debug\OireachtasAPI.pdb
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\bin\Debug\Newtonsoft.Json.pdb

@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json.Linq;
 
 namespace TestOireachtasAPI
 {
@@ -30,7 +31,7 @@ namespace TestOireachtasAPI
         [TestMethod]
         public void TestLoadFromUrl()
         {
-            dynamic loaded = OireachtasAPI.Program.load("https://api.oireachtas.ie/v1/members?limit=50");
+            dynamic loaded = OireachtasAPI.Program.loadFromEndPoint("https://api.oireachtas.ie/v1/members?limit=50").Result;
             Assert.AreEqual(loaded["results"].Count, expected["results"].Count);
 
         }
@@ -41,7 +42,7 @@ namespace TestOireachtasAPI
         [TestMethod]
         public void TestSponsor()
         {
-            List<dynamic> results = OireachtasAPI.Program.filterBillsSponsoredBy("IvanaBacik");
+            List<JToken> results = OireachtasAPI.Program.filterBillsSponsoredBy("IvanaBacik").Result;
             Assert.IsTrue(results.Count>=2);
         }
     }
@@ -61,7 +62,7 @@ namespace TestOireachtasAPI
             DateTime since = new DateTime(2018, 12, 1);
             DateTime until = new DateTime(2019, 1, 1);
 
-            foreach (dynamic bill in OireachtasAPI.Program.filterBillsByLastUpdated(since, until))
+            foreach (dynamic bill in OireachtasAPI.Program.filterBillsByLastUpdated(since, until).Result)
             {
                 received.Add(bill["billNo"]);
             }
