@@ -151,10 +151,6 @@ namespace OireachtasAPI
                 DateTime.TryParse(dateStr, out date);
                 if (date.Date >= since.Date && date.Date <= until.Date)
                 {
-                    if(bill["bill"].Value<string>("billNo") == "101")
-                    {
-                        Console.Write(2);
-                    }
                     filteredList.Add(bill["bill"]);
                 }
             }

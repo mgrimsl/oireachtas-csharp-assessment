@@ -45,15 +45,24 @@ namespace TestOireachtasAPI
     [TestClass]
     public class FilterBillsSponsoredByTest
     {
-        static IDataRepo data = new DataFile();
-        JToken leg = data.getLegislationAsync().Result;
-        JToken mem = data.getMembersAsync().Result;
+        static IDataRepo dataApi = new DataApi();
+        static IDataRepo dataFile = new DataFile();
 
         [TestMethod]
         public void TestSponsor()
         {
+            JToken leg = dataFile.getLegislationAsync().Result;
+            JToken mem = dataFile.getMembersAsync().Result;
             List<JToken> results = Program.filterBillsSponsoredBy("IvanaBacik", ref leg, ref mem);
             Assert.IsTrue(results.Count >= 2);
+        }      
+        [TestMethod]
+        public void TestSponsorAPI()
+        {
+            JToken leg = dataApi.getLegislationAsync().Result;
+            JToken mem = dataApi.getMembersAsync().Result;
+            List<JToken> results = Program.filterBillsSponsoredBy("IvanaBacik", ref leg, ref mem);
+            Assert.IsTrue(results.Count >= 1);
         }
     }
 
