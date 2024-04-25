@@ -10,4 +10,3 @@ C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\Oireachtas
 C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\obj\Debug\Oireacht.F580F35F.Up2Date
 C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\obj\Debug\OireachtasAPI.exe
 C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\obj\Debug\OireachtasAPI.pdb
-C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\OireachtasAPI\bin\Debug\Newtonsoft.Json.pdb

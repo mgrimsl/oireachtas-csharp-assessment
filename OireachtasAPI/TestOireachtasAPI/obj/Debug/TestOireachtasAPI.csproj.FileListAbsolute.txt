@@ -19,3 +19,4 @@ C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\TestOireac
 C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\TestOireachtasAPI\obj\Debug\TestOire.A3EDB2E6.Up2Date
 C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\TestOireachtasAPI\obj\Debug\TestOireachtasAPI.dll
 C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\TestOireachtasAPI\obj\Debug\TestOireachtasAPI.pdb
+C:\Users\Mike\Source\Repos\oireachtas-csharp-assessment\OireachtasAPI\TestOireachtasAPI\bin\Debug\TestOireachtasAPI.dll.config

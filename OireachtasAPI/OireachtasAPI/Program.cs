@@ -23,6 +23,7 @@ namespace OireachtasAPI
             "API",
             "File",
         };
+        static IDataRepo data = null;
 
         static async Task Main(string[] args)
         {
@@ -37,14 +38,15 @@ namespace OireachtasAPI
             //Load from selected data source
             if (API)
             {
-                legislations = await Data.loadFromEndPoint(ConfigurationManager.ConnectionStrings["API"].ConnectionString + "legislation");
-                members = await Data.loadFromEndPoint(ConfigurationManager.ConnectionStrings["API"].ConnectionString + "members");
+                data = new DataApi();
             }
             else
             {
-                legislations = Data.load(LEGISLATION_DATASET);
-                members = Data.load(MEMBERS_DATASET);
+                data = new DataFile();
             }
+            legislations = await data.getLegislationAsync();
+            members = await data.getMembersAsync();
+
             //Run main program loop
             do
             {
@@ -142,7 +144,7 @@ namespace OireachtasAPI
                 DateTime.TryParse(dateStr, out date);
                 if (date >= since && date <= until)
                 {
-                    filteredList.Add(bill);
+                    filteredList.Add(bill["bill"]);
                 }
             }
             return filteredList;
