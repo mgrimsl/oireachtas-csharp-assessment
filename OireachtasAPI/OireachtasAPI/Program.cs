@@ -50,28 +50,35 @@ namespace OireachtasAPI
             //Run main program loop
             do
             {
-                selection = cli.pickList(Filters, "Filter");
+                try
+                {
+                    selection = cli.pickList(Filters, "Filter");
 
-                if (selection == 0)
-                {
-                    string filter = cli.askForInput("Enter a PID...");
-                    result = filterBillsSponsoredBy(filter, ref legislations, ref members);
-                    cli.displayResults(result);
-                }
-                else if (selection == 1)
-                {
-                    DateTime since, until;
-                    if (!cli.askForDates(out since, out until))
+                    if (selection == 0)
                     {
-                        continue;
+                        string filter = cli.askForInput("Enter a PID...");
+                        result = filterBillsSponsoredBy(filter, ref legislations, ref members);
+                        cli.displayResults(result);
                     }
-                    result = filterBillsByLastUpdated(since, until, ref legislations);
-                    cli.displayResults(result);
+                    else if (selection == 1)
+                    {
+                        DateTime since, until;
+                        if (!cli.askForDates(out since, out until))
+                        {
+                            continue;
+                        }
+                        result = filterBillsByLastUpdated(since, until, ref legislations);
+                        cli.displayResults(result);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Goodbye!");
+                        return;
+                    }
                 }
-                else
+                catch(Exception ex)
                 {
-                    Console.WriteLine("Goodbye!");
-                    return;
+                    cli.askForInput($"Error: {ex.Message} \nPress any button to continue");
                 }
             } while (true);
         }
